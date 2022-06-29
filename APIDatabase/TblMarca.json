@@ -1,0 +1,12 @@
+[
+    {
+        "codigo_MarcaProducto": 1,
+        "Nombre_Marca": "TOYOTA",
+        "Estado_Marca": true
+    },
+    {
+        "codigo_MarcaProducto": 2,
+        "Nombre_Marca": "NISSAN MARCH",
+        "Estado_Marca": false
+    }
+]

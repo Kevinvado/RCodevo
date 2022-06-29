@@ -1,0 +1,12 @@
+[
+    {
+        "codigo_Bodega": 1,
+        "Nombre_Bodega": "bodega 1",
+        "Ubicacion": "carazo"
+    },
+    {
+        "codigo_Bodega": 2,
+        "Nombre_Bodega": "bodega 2",
+        "Ubicacion": "managua"
+    }
+]

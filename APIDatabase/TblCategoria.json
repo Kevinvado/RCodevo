@@ -1,0 +1,38 @@
+[
+    {
+        "codigo_Categoria": 1,
+        "Nombre_Categoria": "Sistema Electrico",
+        "Descripcion": "Faros,direccionales,alternadores,arrancadores,focos",
+        "Estado_Categoria": true
+    },
+    {
+        "codigo_Categoria": 2,
+        "Nombre_Categoria": "Sistema de Encendido",
+        "Descripcion": "bobinas,cables de bujias,resistencia,modulos,supresores,precalentadores",
+        "Estado_Categoria": true
+    },
+    {
+        "codigo_Categoria": 3,
+        "Nombre_Categoria": "Sistema de frenado",
+        "Descripcion": "Disco de freno,calipers,pastillas,zapatas,etc",
+        "Estado_Categoria": true
+    },
+    {
+        "codigo_Categoria": 4,
+        "Nombre_Categoria": "Sistema de suspencion",
+        "Descripcion": "Amortiguadores,resortes,trapecios,rotulas,etc",
+        "Estado_Categoria": true
+    },
+    {
+        "codigo_Categoria": 5,
+        "Nombre_Categoria": "Sistema motor",
+        "Descripcion": "Juego de anillos,bielas,metales de bancadas,empaques,retenes,valvulas,bombas de agua,eje de levas,culata,carter,bonbas de aceite,bateria,disco de embragues,etc",
+        "Estado_Categoria": true
+    },
+    {
+        "codigo_Categoria": 6,
+        "Nombre_Categoria": "Autopartes de carroceria",
+        "Descripcion": "Capo,guardafangos,puertas,parachoques,parabrisas,espejos,vidrios",
+        "Estado_Categoria": true
+    }
+]
