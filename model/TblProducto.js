@@ -1,4 +1,4 @@
-import { Entity } from "../model/core/Entity.js";
+import { Entity } from "../model/core/Entity";
 
 class TblProductos extends Entity {
     
