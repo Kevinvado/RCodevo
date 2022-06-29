@@ -5,5 +5,6 @@ export const ApiDataBase = {
     TblEmpleados: require("../../APIDatabase/TblEmpleados.json"),
     TblMarca: require("../../APIDatabase/TblMarca.json"),
     TblProducto: require("../../APIDatabase/TblProducto.json"),
-    TblProveedor: require("../../APIDatabase/TblProveedor.json")
+    TblProveedor: require("../../APIDatabase/TblProveedor.json"),
+    TblCompra: require("../../APIDatabase/TblCompra.json")
 }

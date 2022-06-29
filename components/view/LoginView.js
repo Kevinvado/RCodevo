@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TouchableOpacity , TextInput, Image} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity , TextInput, Button } from 'react-native';
 
 const LoginView = (props) => {
 
@@ -6,21 +6,37 @@ const LoginView = (props) => {
         <Text style = {styles.Title}>Administracion</Text>
         <Text style = {styles.Banner}>Repuestos Codevo</Text>
 
-        <View style = {styles.body_login}>
+        <View style = {styles.form_div}>
 
-            <TextInput style = {styles.input} placeholder = "Usuario" />
-            <TextInput style = {styles.input} placeholder = "Contraseña" />
+                <View style={styles.form_control}>
+                    <TextInput style = {styles.form_input} placeholder="Email" />
+                    
+                </View>
 
-        <TouchableOpacity onPress={() => {
+                <View style={styles.form_control}>
+                    <TextInput style = {styles.form_input} placeholder="Contraseña" />
+                    
+                </View>
+
+                <View style={styles.form_control}>
+                    <TextInput type="checkbox" name="remember" />
+                    <Text >Recordar sesion</Text>
+                </View>
+
+                <View style={styles.form_control}>
+                    <Button title='Iniciar sesion' onPress={() => {
                 props.navigation.navigate('MainView');
-            }}
-            style = {styles.Button} >
-            <Text style = {styles.ButtonText}>Iniciar sesion</Text>
-       </TouchableOpacity>
+                }}></Button>
+                </View>
+
+                <View style={styles.form_control}>
+                    <Text style = { styles.Text_item}>Se te olvidó tu contraseña</Text>
+                    <Text style = { styles.Text_item}>Crear una cuenta</Text>
+                </View>
+            </View>
 
         </View>
-        
-    </View>);
+   );
 }
 
 export { LoginView }
@@ -44,32 +60,22 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         textAlign: 'center'
     },
-    input: {
-        height: 50,
-        margin: 12,
-        fontSize: 20,
-        padding: 8,
-        backgroundColor: '#e0e0e0',
-        borderRadius: 10
-      },
-    Button: {
-        marginRight: 14,
-        marginLeft: 14,
-        marginTop: 24,
-        paddingTop: 10,
-        paddingBottom: 10,
-        backgroundColor: 'black',
-        borderRadius: 10,
-        borderWidth: 1,
-        borderColor: 'white'
+    form_div: {
+        flex: 4
     },
-    ButtonText: {
-        color: 'white',
-        textAlign: 'center',
-        fontSize: 19
-      },
-    body_login: {
-        marginTop: 10,
-       flex: 4
+    form_control: {
+        marginTop: 30,
+        position: 'relative'
+    },
+    form_input: {
+        padding: 10,
+        fontSize: '1.2rem',
+        borderWidth: 2,
+        borderRadius: 5,
+        borderColor: "teal"
+    },
+    Text_item: {
+        color: 'blue'
     }
+
 });

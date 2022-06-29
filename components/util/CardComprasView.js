@@ -1,20 +1,20 @@
 import { StyleSheet, Text, View, TouchableOpacity, Button } from 'react-native';
 
-const CardProductosView = (props) => {
+const CardComprasView = (props) => {
     return (<View style = {styles.CardStyle}>
-        <Text style = {styles.Title}>Nombre de producto: {props.data.Nombre_producto}</Text>
-
-        <Button onPress={() => {
-             props.sp ? props.SeleccionProducto(props.data.PKProducto, props.data.NombreProducto) : false
-            }} title = {
-                props.sp ? <Text style = {styles.ButtonText}>Seleccionar</Text> : <Text style = {styles.ButtonText}>Ver detalles</Text>
-            }>
+        <Text style = {styles.Title}>Fecha de compra: {props.data.Fecha_Compra}</Text>
+        <Text style = {styles.Atribute}>Total: {props.data.Total}</Text>
+        <Text style = {styles.Atribute}>Iva: {props.data.Iva_Compra}</Text>
+        
+        <Button onPress={() => { 
+            //
+        }} title = {<Text style = {styles.ButtonText}>Ver detalles</Text>}>
        </Button>
 
     </View>);
 }
 
-export { CardProductosView }
+export { CardComprasView }
 
 const styles = StyleSheet.create({
     CardStyle: {

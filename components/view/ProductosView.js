@@ -23,7 +23,7 @@ class ProductosView extends React.Component {
     }
 
     CargarProductos = async (param = "") => {
-        const productos = await this.TblProductos.Get();
+        const productos = await this.TblProductos.Get(param);
 
         this.setState({
             isLoading: false,
@@ -32,12 +32,11 @@ class ProductosView extends React.Component {
 
     }
 
-    /*
-    SeleccionProducto = async (pk, name) => {
-        this.props.route.params.SeleccionProducto(pk, name);
-        this.props.navigation.navigate("Detalle de Compra");
+
+    SProducto = async (id, name) => {
+        this.props.route.params.SProducto(id, name);
+        //this.props.navigation.navigate("Detalle de Compra");
     }
-    */
 
     render() {
 
@@ -49,8 +48,8 @@ class ProductosView extends React.Component {
             {this.state.isLoading ?
                 <ActivityIndicator /> :
                 this.state.Dataset.map(
-                    c => <CardProductosView key = {c.PKProducto}
-                     data = { c } SeleccionProducto = { this.SeleccionProducto } selecct = {this.state.selecct} />
+                    c => <CardProductosView key = {c.codigo_Producto}
+                     data = { c } SProducto = { this.SProducto } sp = {this.state.sp} />
                 )}
         </ScrollView> )
     }
@@ -63,14 +62,14 @@ const styles = StyleSheet.create({
       flex: 5,
       width: "100%",
       backgroundColor: 'white'
-        },
-    text_input: {
-        height: 50,
-        margin: 12,
-        fontSize: 20,
-        padding: 8,
-        backgroundColor: '#e0e0e0',
-        borderRadius: 10
       },
+    text_input: {
+      margin: 10,
+      padding: 10,
+      fontSize: '1.2rem',
+      borderWidth: 2,
+      borderRadius: 5,
+      borderColor: "teal"
+    }
     
   });

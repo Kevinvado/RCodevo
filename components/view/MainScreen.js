@@ -1,9 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { FrmDetalleCompra } from './frmview/FrmDetalleCompra';
-import { NewFrmCompra } from './frmview/NewFrmCompra';
+import { ProductosView } from './ProductosView';
 
-//Views 
-
+//Vistas
 const Stack = createNativeStackNavigator();
 
 export default function MainScreenView() {
