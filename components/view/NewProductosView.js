@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
+
 import { TblProductos } from '../../model/TblProducto';
 
 class NewProductosView extends React.Component {
@@ -18,6 +19,7 @@ class NewProductosView extends React.Component {
     }
 
     SCategoria = async (id, name) => {
+
         this.setState({
             categoria: name
         });
@@ -26,6 +28,7 @@ class NewProductosView extends React.Component {
     }
 
     SMarca = async (id, name) => {
+
         this.setState({
             marca: name
         });
@@ -36,7 +39,6 @@ class NewProductosView extends React.Component {
     Save = async () => {
         try {
             await this.Producto.Save("codigo_Producto");
-            
             return true;
         } catch (error) {
             console.log(error);
@@ -47,7 +49,7 @@ class NewProductosView extends React.Component {
 
 
     render() {
-        return <View style={{ padding: 4, backgroundColor: 'white'}}>
+        return <View style={{ padding: 4, backgroundColor: 'white' }}>
 
             <Text style={styles.Title}>Nuevo producto</Text>
 
@@ -82,15 +84,21 @@ class NewProductosView extends React.Component {
                     });
                 }} />
             </View>
+
+            <TextInput style={styles.InputStyle}
+                placeholder='Estado'
+                onChangeText = {val => this.Producto.Estado_Producto = val}></TextInput>
                
             {/** OPCIONES */}
-            <Button title="Guardar" onPress={async () => {               
-                await this.props.route.params.GuardarContenido(this.Bloque, this.Contenido);
-                await this.props.route.params.actualizarContenidos();                
+            <Button title="Guardar" onPress = { async () => {               
+               await this.Save();    
+               await this.Cargar(); 
+               
+               this.props.navigation.navigate("Productos");           
             }} />
 
             <Button title="Cancelar" onPress={() => {
-                this.props.navigation.navigate("DetalleCursoView");
+                this.props.navigation.navigate("Productos");
             }} />
             
         </View>;
@@ -110,7 +118,9 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 3,
     borderColor: 'gray',
-    fontSize: 15
+    fontSize: 15,
+    marginLeft: 8,
+    marginRight: 8
     },
     InputStyle1:{
         flex: 1,
@@ -126,6 +136,8 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 3,
     borderColor: '#2196f3',
-    margin: 4
+    margin: 4,
+    marginLeft: 8,
+    marginRight: 8
     }
 });

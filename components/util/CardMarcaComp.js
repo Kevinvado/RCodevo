@@ -1,11 +1,13 @@
 import { StyleSheet, Text, View, TouchableOpacity, Button } from 'react-native';
 
-const CardProductosView = (props) => {
+const CardMarcaComp = (props) => {
+
     return (<View style = {styles.CardStyle}>
-        <Text style = {styles.Title}>Nombre de producto: {props.data.Nombre_producto}</Text>
+        <Text style = {styles.Title}>Nombre de marca: {props.data.Nombre_Marca}</Text>
+        <Text style = {styles.Atribute}>Estado: {props.data.Estado_Marca}</Text>
 
         <Button onPress={() => {
-             props.sp ? props.SeleccionProducto(props.data.PKProducto, props.data.NombreProducto) : false
+             props.sp ? props.SMarca(props.data.codigo_MarcaProducto, props.data.Nombre_Marca) : false
             }} title = {
                 props.sp ? <Text style = {styles.ButtonText}>Seleccionar</Text> : <Text style = {styles.ButtonText}>Ver detalles</Text>
             }>
@@ -14,27 +16,26 @@ const CardProductosView = (props) => {
     </View>);
 }
 
-export { CardProductosView }
+export { CardMarcaComp }
 
 const styles = StyleSheet.create({
     CardStyle: {
         justifyContent: "center",
         margin: 14,
-        borderWidth: 1,
         padding: 12,
+        backgroundColor: 'teal',
         borderRadius: 2,
-        borderColor: 'teal',
         marginTop: 4,
         marginBottom: 4
     }, Title: {
-        color: "black",
-        fontSize: 20
+        color: "white",
+        fontSize: 22
     }, Atribute: {
-        color: "grey",
+        color: "white",
         fontSize: 16,
         marginBottom: 8
     }, Resumen: {
-        color: "grey",
+        color: "white",
         fontSize: 12
     }
     

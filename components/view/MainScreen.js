@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NewProductosView } from './NewProductosView';
 import { ProductosView } from './ProductosView';
 import { CategoriasView } from './CategoriasView';
+import { MarcasView } from './MarcasView';
 
 //Vistas
 const Stack = createNativeStackNavigator();
@@ -16,12 +17,7 @@ export default function MainScreenView() {
        <Stack.Screen name = "Productos" component = {ProductosView} />
        <Stack.Screen name = "Nuevo Producto" component = {NewProductosView} />
        <Stack.Screen name = "CategoriasView" component={CategoriasView} />
-       {
-           /*
-            <Stack.Screen name="Detalle de Compra" component = {FrmDetalleCompra} />
-            <Stack.Screen name="Nueva Compra" component = {NewFrmCompra} />
-           */
-       }
+       <Stack.Screen name = "MarcasView" component={MarcasView} />
        
       </Stack.Navigator>
   );
