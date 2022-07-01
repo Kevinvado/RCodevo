@@ -3,67 +3,63 @@ import { StyleSheet, Text, View, ActivityIndicator, ScrollView, TextInput, Butto
 
 
 //Componentes
-import { CardProductosView } from '../util/CardProductosView';
+import { CardCategoriaComp } from '../util/CardCategoriaComp';
 
 //Models
-import { TblProductos } from '../../model/TblProducto';
+import { TblCategoria } from '../../model/TblCategoria';
 
-class ProductosView extends React.Component {
+class CategoriasView extends React.Component {
     constructor(props) {
         super();
         this.props = props;
+
         this.state = {
             isLoading: true,
             Dataset: [],
-            selecct: this.props.route.params ?? false
+            estado: this.props.route.params ?? false
         }
 
-        this.TblProductos = new TblProductos();
+        this.TblCategoria = new TblCategoria();
         this.Cargar();
     }
 
     Cargar = async (param = "") => {
-        const productos = await this.TblProductos.Get(param);
+        const list = await this.TblCategoria.Get(param);
 
         this.setState({
             isLoading: false,
-            Dataset: productos
+            Dataset: list
         });
 
     }
 
-
-    SProducto = async (id, name) => {
-        this.props.route.params.SProducto(id, name);
-        //this.props.navigation.navigate("Detalle de Compra");
+    SCategoria = async (id, name) => {
+        this.props.route.params.SCategoria(id, name);
+        this.props.navigation.navigate("Nuevo Producto");
     }
 
     render() {
 
         return (<ScrollView style = {styles.CardStyles}>
             <TextInput style = {styles.text_input}
-            placeholder = 'Buscar productos'
+            placeholder = 'Buscar categoria'
             onChangeText = { val => this.Cargar(val)}></TextInput>
 
             <View style = { styles.form_control}>
-                        <Button title='Nueva Producto' onPress={async () => {
-                this.props.navigation.navigate("Nuevo Producto", {
-                    Cargar: this.Cargar
-                });
-            }}></Button>
+                <Button title = 'Nueva categoria'></Button>
             </View>
 
             {this.state.isLoading ?
                 <ActivityIndicator /> :
                 this.state.Dataset.map(
-                    c => <CardProductosView key = {c.codigo_Producto}
-                     data = { c } SProducto = { this.SProducto } sp = {this.state.sp} />
+                    c => <CardCategoriaComp key = {c.codigo_Categoria}
+                     data = { c } SCategoria = { this.SCategoria } sp = { this.state.estado } />
                 )}
         </ScrollView> )
     }
 }
 
-export { ProductosView }
+export { CategoriasView }
 
 const styles = StyleSheet.create({
     CardStyles:{
