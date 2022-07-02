@@ -38,7 +38,12 @@ class ComprasView extends React.Component {
             placeholder = 'Buscar compra'
             onChangeText = { val => this.CargarCompra(val)}></TextInput>
             <View style = { styles.form_control}>
-            <Button title='Nueva compra'></Button>
+            <Button title='Nueva compra' onPress={async () => {
+                this.props.navigation.navigate("NuevaCompra", {
+                    CargarCompra: this.CargarCompra
+                });
+            }}
+            ></Button>
             </View>
             <Text style = {styles.Title}>Historial de compras</Text>
             {this.state.isLoading ?

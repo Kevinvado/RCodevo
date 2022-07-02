@@ -1,14 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View, ActivityIndicator, ScrollView, TextInput, Button } from 'react-native';
 
-
 //Componentes
-import { CardProductosView } from '../util/CardProductosView';
 
 //Models
-import { TblProductos } from '../../model/TblProducto';
+import { TblProductos } from '../../../model/TblProducto';
+import { CardProductosView } from '../../util/CardProductosView';
 
-class ProductosView extends React.Component {
+class SProductosView extends React.Component {
     constructor(props) {
         super();
         this.props = props;
@@ -31,6 +30,13 @@ class ProductosView extends React.Component {
 
     }
 
+    SProducto = async (id, name) => {
+        console.log(id, name);
+        this.props.route.params.SProducto(id, name);
+        this.props.navigation.navigate("NuevoDetalleCompra");
+    }
+
+
     render() {
 
         return (<ScrollView style = {styles.CardStyles}>
@@ -50,13 +56,13 @@ class ProductosView extends React.Component {
                 <ActivityIndicator /> :
                 this.state.Dataset.map(
                     c => <CardProductosView key = {c.codigo_Producto}
-                     data = { c } selected = {false} />
+                     data = { c } SProducto = {this.SProducto} selected = {true} />
                 )}
         </ScrollView> )
     }
 }
 
-export { ProductosView }
+export { SProductosView }
 
 const styles = StyleSheet.create({
     CardStyles:{

@@ -2,8 +2,8 @@
     {
         "codigo_Empleado": 1,
         "Nombre_Empleado": "Kevin",
-        "Direccion_Empleado": "k\/62 carretera a la boquita",
-        "Telefono_Empleado": 57162050,
+        "Direccion_Empleado": "k62 carretera a la boquita",
+        "Telefono_Empleado": "57162050",
         "Email_Empleado": "kevinvado2000@gmail.com",
         "Password_Empleado": "16082000"
     },
@@ -11,7 +11,7 @@
         "codigo_Empleado": 2,
         "Nombre_Empleado": "Cristopher",
         "Direccion_Empleado": "La trinidad",
-        "Telefono_Empleado": 88142347,
+        "Telefono_Empleado": "88142347",
         "Email_Empleado": "cgparrales23@gmail.com",
         "Password_Empleado": "27112000"
     }

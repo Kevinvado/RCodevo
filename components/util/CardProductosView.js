@@ -3,11 +3,12 @@ import { StyleSheet, Text, View, TouchableOpacity, Button } from 'react-native';
 const CardProductosView = (props) => {
     return (<View style = {styles.CardStyle}>
         <Text style = {styles.Title}>Nombre de producto: {props.data.Nombre_producto}</Text>
+        <Text style = {styles.Title}>Estado: {props.data.Estado_Producto}</Text>
 
         <Button onPress={() => {
-             props.sp ? props.SeleccionProducto(props.data.PKProducto, props.data.NombreProducto) : false
+             props.selected ? props.SProducto(props.data.codigo_Producto, props.data.Nombre_producto) : false /* metodo de detalles de producto */
             }} title = {
-                props.sp ? <Text style = {styles.ButtonText}>Seleccionar</Text> : <Text style = {styles.ButtonText}>Ver detalles</Text>
+                props.selected ? <Text style = {styles.ButtonText}>Seleccionar</Text> : <Text style = {styles.ButtonText}>Ver detalles</Text>
             }>
        </Button>
 

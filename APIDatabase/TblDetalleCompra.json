@@ -3,18 +3,18 @@
         "codigo_DetalleCompra": 1,
         "codigo_Compra": 1,
         "codigo_Producto": 1,
-        "Precio_Compra": 4000.0000,
-        "Cantidad": 2.0000,
-        "Sub_Total": 4000.0000,
-        "Estado_DetalleCompra": true
+        "Precio_Compra": "4000.0000",
+        "Cantidad": "2.0000",
+        "Sub_Total": "4000.0000",
+        "Estado_DetalleCompra": "true"
     },
     {
         "codigo_DetalleCompra": 2,
         "codigo_Compra": 2,
         "codigo_Producto": 2,
-        "Precio_Compra": 4550.0000,
-        "Cantidad": 1.0000,
-        "Sub_Total": 4550.0000,
-        "Estado_DetalleCompra": true
+        "Precio_Compra": "4550.0000",
+        "Cantidad": "1.0000",
+        "Sub_Total": "4550.0000",
+        "Estado_DetalleCompra": "true"
     }
 ]

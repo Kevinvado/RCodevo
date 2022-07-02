@@ -2,25 +2,25 @@
     {
         "codigo_Proveedor": 1,
         "Nombre_Proveedor": "Marcos",
-        "Telefono_Proveedor": 88442331,
+        "Telefono_Proveedor": "88442331",
         "Direccion_Proveedor": "managua",
         "Email_Proveedor": "marco45@gmail.com",
-        "Estado_proveedor": true
+        "Estado_proveedor": "true"
     },
     {
         "codigo_Proveedor": 2,
         "Nombre_Proveedor": "Joel",
-        "Telefono_Proveedor": 57233840,
+        "Telefono_Proveedor": "57233840",
         "Direccion_Proveedor": "Esteli",
         "Email_Proveedor": "joelmartinez23@gmail.com",
-        "Estado_proveedor": false
+        "Estado_proveedor": "false"
     },
     {
         "codigo_Proveedor": 3,
         "Nombre_Proveedor": "Maria",
-        "Telefono_Proveedor": 23568934,
+        "Telefono_Proveedor": "23568934",
         "Direccion_Proveedor": "Panama",
         "Email_Proveedor": "mariasalazar@octlock.is",
-        "Estado_proveedor": true
+        "Estado_proveedor": "true"
     }
 ]
