@@ -43,7 +43,6 @@ class Entity {
         let Data = await this.TakeData();
         Data = Data.filter(ent => ent[paramName].toString().includes(paramValue.toString()));
 
-        console.log(Data);
         return Data.map(ent => new this.constructor(ent));
     }
 

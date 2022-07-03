@@ -44,14 +44,6 @@ class SProductosView extends React.Component {
             placeholder = 'Buscar productos'
             onChangeText = { val => this.Cargar(val)}></TextInput>
 
-            <View style = { styles.form_control}>
-            <Button title='Nueva Producto' onPress={async () => {
-                this.props.navigation.navigate("Nuevo Producto", {
-                    Cargar: this.Cargar
-                });
-            }}></Button>
-            </View>
-
             {this.state.isLoading ?
                 <ActivityIndicator /> :
                 this.state.Dataset.map(

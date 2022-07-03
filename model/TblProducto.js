@@ -43,7 +43,7 @@ class TblProductos extends Entity {
             if (this.codigo_Marca != "") {
                 const marca = new TblMarca();
 
-                return await marca.GetByProps("codigo_Marca", this.codigo_Marca);
+                return await marca.GetByProps("codigo_MarcaProducto", this.codigo_Marca);
             }else{
                 return this.TblMarca.val;
             }            

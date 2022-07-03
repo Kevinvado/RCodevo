@@ -31,6 +31,18 @@ class ProductosView extends React.Component {
 
     }
 
+    Load = async (param = (new TblProductos())) => {
+
+    const clista = await param.TblCategoria.get();
+    const cmarca = await param.TblMarca.get();
+
+    this.props.navigation.navigate('DetalleProductoView', {
+        objecto: param,
+        CatLista: clista,
+        CatMarca: cmarca
+    });
+    }
+
     render() {
 
         return (<ScrollView style = {styles.CardStyles}>
@@ -50,7 +62,7 @@ class ProductosView extends React.Component {
                 <ActivityIndicator /> :
                 this.state.Dataset.map(
                     c => <CardProductosView key = {c.codigo_Producto}
-                     data = { c } selected = {false} />
+                     data = { c } selected = {false} Load = { this.Load } />
                 )}
         </ScrollView> )
     }

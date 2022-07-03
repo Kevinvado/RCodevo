@@ -31,6 +31,20 @@ class ComprasView extends React.Component {
 
     }
 
+    Load = async (param = (new TblCompra())) => {
+        const proveedor = await param.TblProveedor.get();
+        const empleado = await param.TblEmpleado.get();
+        const detalle = await param.TblDetalleCompra.get();
+
+        this.props.navigation.navigate('DetalleCompraView', {
+            objecto: param,
+            proveedor: proveedor,
+            empleado: empleado,
+            detalle: detalle
+        });
+    
+        }
+
     render() {
 
         return (<ScrollView style = {styles.CardStyles}>
@@ -50,7 +64,7 @@ class ComprasView extends React.Component {
                 <ActivityIndicator /> :
                 this.state.Dataset.map(
                     c => <CardComprasView key = {c.codigo_Compra}
-                     data = { c } />
+                     data = { c } Load = {this.Load}/>
                 )}
         </ScrollView> )
     }

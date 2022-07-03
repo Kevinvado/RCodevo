@@ -14,10 +14,8 @@ class CardComp extends React.Component {
         }
 
         this.obj = this.props.obj;
-
-        console.log(this.TblProducto);
-
         this.CargarProducto();
+
     }
 
     CargarProducto = async () => {

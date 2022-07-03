@@ -6,7 +6,7 @@ const CardProductosView = (props) => {
         <Text style = {styles.Title}>Estado: {props.data.Estado_Producto}</Text>
 
         <Button onPress={() => {
-             props.selected ? props.SProducto(props.data.codigo_Producto, props.data.Nombre_producto) : false /* metodo de detalles de producto */
+             props.selected ? props.SProducto(props.data.codigo_Producto, props.data.Nombre_producto) : props.Load(props.data);
             }} title = {
                 props.selected ? <Text style = {styles.ButtonText}>Seleccionar</Text> : <Text style = {styles.ButtonText}>Ver detalles</Text>
             }>

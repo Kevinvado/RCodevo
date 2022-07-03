@@ -7,7 +7,7 @@ const CardComprasView = (props) => {
         <Text style = {styles.Atribute}>Iva: {props.data.Iva_Compra}</Text>
         
         <Button onPress={() => { 
-            //
+            props.Load(props.data);
         }} title = {<Text style = {styles.ButtonText}>Ver detalles</Text>}>
        </Button>
 

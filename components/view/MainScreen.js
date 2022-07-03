@@ -10,6 +10,8 @@ import { SProveedoresView } from './SelecionesView/SProveedoresView';
 import { SEmpleadosView } from './SelecionesView/SEmpleadosView';
 import { NewDetalleCompraView } from './NewDetalleCompraView';
 import { SProductosView } from './SelecionesView/SProductosView';
+import { DetalleProductoView } from './DetallesView/DetalleProductoView';
+import { DetalleCompraView } from './DetallesView/DetalleCompraView';
 
 //Vistas
 const Stack = createNativeStackNavigator();
@@ -30,6 +32,8 @@ export default function MainScreenView() {
        <Stack.Screen name = "NuevaCompra" component={NewFrmCompraView} />
        <Stack.Screen name = "NuevoDetalleCompra" component={NewDetalleCompraView} />
        <Stack.Screen name = "ComprasView" component={ComprasView} />
+       <Stack.Screen name = "DetalleProductoView" component={DetalleProductoView} />
+       <Stack.Screen name = "DetalleCompraView" component={DetalleCompraView} />
        
       </Stack.Navigator>
   );
