@@ -69,7 +69,7 @@ class NewFrmCompraView extends React.Component {
                 const detallecompra = this.state.detallecompra[index];
                 detallecompra.codigo_Compra = this.Compra.codigo_Compra;
 
-                await this.detallecompra.Save("codigo_DetalleCompra");
+                await detallecompra.Save("codigo_DetalleCompra");
             }
 
             return true;
